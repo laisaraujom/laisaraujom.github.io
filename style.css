@@ -1,0 +1,467 @@
+/* Importação da família Nexa (Bold e Light) otimizada para Web */
+@import url('https://fonts.cdnfonts.com/css/nexa-bold');
+
+/* ==========================================================================
+   1. VARIÁVEIS DE AMBIENTE E TEMAS (Dark/Light)
+   ========================================================================== */
+:root {
+    /* Tema Escuro (Padrão) */
+    --bg-color: #0f0f12;
+    --text-color: #f5f5f7;
+    --card-bg: #16161a;
+    --card-border: #2a2a35;
+    --accent-gradient: linear-gradient(135deg, #4f46e5, #06b6d4);
+    --timeline-line: #2a2a35;
+}
+
+body.light-theme {
+    /* Tema Claro */
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --accent-gradient: linear-gradient(135deg, #3b82f6, #2563eb);
+    --timeline-line: #cbd5e1;
+}
+
+/* Reset Básico */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Nexa Light', 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Aplicando a Nexa Bold em Títulos e Botões */
+h1, h2, h3, h4, nav a, .lang-btn, .theme-btn, .btn-rounded, .skill-tag {
+    font-family: 'Nexa Bold', 'Segoe UI', sans-serif;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO (Header & Nav)
+   ========================================================================== */
+header {
+    display: flex;
+    box-sizing: border-box;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgba(22, 22, 26, 0.05);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #3b82f6;
+}
+
+/* Botões de Ação do Menu */
+.theme-btn, .lang-btn {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover, .lang-btn:hover {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* ==========================================================================
+   3. PÁGINA INICIAL (Hero Section)
+   ========================================================================== */
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0px auto;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.pic{
+    margin-bottom: 25px
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.7;
+    margin-bottom: 35px; /* Espaço entre a descrição e os botões */
+    font-family: 'Nexa Light', sans-serif;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.btn-rounded {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: var(--accent-gradient);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-rounded:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+
+
+/* ==========================================================================
+   4. PÁGINA SOBRE MIM (About Section)
+   ========================================================================== */
+.about-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.about-photo {
+    flex-shrink: 0px;
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--card-border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    opacity: 1; 
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+/* Grid de Skills */
+.skills-grid {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.skill-tag {
+    background: var(--accent-gradient);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* --- TÓPICO 1: JORNADA ACADÊMICA (Timeline Linha) --- */
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    padding-left: 20px;
+    border-left: 2px solid var(--timeline-line);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+}
+
+.timeline-item h4 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.timeline-item p {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+/* --- TÓPICOS 2 E 3: CERTIFICADOS E OUTRAS EXPERIÊNCIAS --- */
+.custom-history {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    padding-left: 20px;
+    border-left: 2px solid var(--timeline-line);
+}
+
+.history-item {
+    position: relative;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.history-item::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+}
+
+.history-item h4 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.history-item p {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+/* ==========================================================================
+   5. PÁGINA DE PROJETOS & FORMULÁRIO DE CONTATO
+   ========================================================================== */
+.projects {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* MODIFICADO: Força explicitamente a estrutura de 2 colunas simétricas (Grade 2x2) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.btn-project {
+    display: block;
+    padding: 8px 16px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: background 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-project:hover {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Seção de Contato */
+/* ==========================================================================
+   Seção de Contato - Ajustada e Centralizada
+   ========================================================================== */
+/* ==========================================================================
+   Seção de Contato - Idêntica e Estável em Qualquer Idioma
+   ========================================================================== */
+.contact {
+    width: 100%;             /* Garante que o container base respeite o fluxo */
+    max-width: 550px;        /* Define o limite ideal para não esticar na tela */
+    min-width: 320px;        /* Impede que o formulário encolha demais e fique estreito */
+    margin: 60px auto 40px auto; /* Centraliza perfeitamente na página */
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* Força o formulário a ocupar 100% do espaço controlado pelo .contact */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Campos de entrada idênticos para PT e EN */
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Nexa Light', sans-serif;
+    text-align: left;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.2);
+}
+
+#form-feedback {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
