@@ -12,3 +12,15 @@ index.html — Página inicial, com apresentação e efeito de digitação (typi
 projetos.html — Galeria de projetos desenvolvidos, com links para repositórios e demos, além de um formulário de contato.
 sobre.html — Sobre mim: competências, jornada acadêmica, certificados e outras experiências (intercâmbios).
 
+• Tecnologias utilizadas
+
+HTML5 — estruturação semântica do conteúdo
+CSS3 — estilização e responsividade
+JavaScript — interatividade (toggle de tema, troca de idioma, efeito de digitação, validação do formulário)
+Formspree — envio de mensagens via formulário de contato
+
+
+• Funcionalidades
+
+Alternância entre tema claro e escuro
+Alternância entre português e inglês (atributos data-pt / data-en)
