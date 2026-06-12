@@ -1,5 +1,5 @@
 Laís Moura - Meu Portfolio
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 Portfólio pessoal desenvolvido para apresentar minha trajetória acadêmica, certificações e projetos enquanto estudante de Ciência da Computação.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 • Sobre o projeto
@@ -19,3 +19,4 @@ Formspree — envio de mensagens via formulário de contato
 • Funcionalidades
 Alternância entre tema claro e escuro
 Alternância entre português e inglês (atributos data-pt / data-en)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
