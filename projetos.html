@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laís Moura - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/logo3.png" type="image/png">
+</head>
+<body class="dark-theme">
+
+    <header>
+        <a href="index.html" class="logo">
+             <img src="imagens/logo3.png" alt="Logo">
+        </a>
+        <nav>
+            <a href="index.html" data-pt="Home" data-en="Home">Home</a>
+            <a href="projetos.html" class="active" data-pt="Projetos" data-en="Projects">Projetos</a>
+            <a href="sobre.html" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</a>
+            <button id="lang-toggle" class="lang-btn">EN</button>
+            <button id="theme-toggle" class="theme-btn">☀️</button>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <h2 data-pt="Meus Projetos" data-en="My Projects">Meus Projetos</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div>
+                    <h3 data-pt="Museu das Mentes" data-en="Mind Museum">Museu das Mentes</h3>
+                    <p data-pt="Jogo desenvolvido através da plataforma Bitsy, onde o personagem ajuda estátuas de ícones da computação a encontrarem objetivos perdidos no museu." data-en="A game developed using the Bitsy platform, where the character helps statues of computing icons find lost objects within the museum.">Jogo desenvolvido através da plataforma Bitsy, onde o personagem ajuda estátuas de ícones da computação a encontrarem objetivos perdidos no museu.</p>
+                </div>
+                <a href="https://laismoura.itch.io/museu-das-mentes" target="_blank" class="btn-project" style="text-align: center; text-decoration: none;" data-pt="Visualizar" data-en="View Project">Visualizar</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3 data-pt="Projeto HYROX" data-en="HYROX Project">Projeto HYROX</h3>
+                    <p data-pt="Projeto desenvolvido inteiramente em Python, voltado para cadastro e monitoramento de treinos e de composição corporal, além de interação com um agente para avaliação e sugestões personalizadas." data-en="A project developed entirely in Python, designed for registering and tracking workouts and body composition, including interaction with an agent for tailored feedback.">Projeto desenvolvido inteiramente em Python, voltado para cadastro e monitoramento de treinos e de composição corporal, além de interação com um agente para avaliação e sugestões personalizadas.</p>
+                </div>
+                <a href="https://github.com/laisaraujom/projeto-hyrox" target="_blank" class="btn-project" style="text-align: center; text-decoration: none;" data-pt="Visualizar" data-en="View Project">Visualizar</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3 data-pt="Jogo 'Cadê o Bicho?'" data-en="'Where is the Animal?' Game">Jogo 'Cadê o Bicho?'</h3>
+                    <p data-pt="Projeto desenvolvido com enfoque na acessibilidade e inclusão de crianças portadoras de deficiência visual através de estímulos táteis e sonorização contextual." data-en="A project focused on accessibility and inclusion for visually impaired children using tactile stimuli and contextual audio tracking.">Projeto desenvolvido com enfoque na acessibilidade e inclusão de crianças portadoras de deficiência visual através de estímulos táteis e sonorização contextual.</p>
+                </div>
+                <a href="https://sites.google.com/cesar.school/projetogrupo13/home?authuser=0" target="_blank" class="btn-project" style="text-align: center; text-decoration: none;" data-pt="Visualizar" data-en="View Project">Visualizar</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3 data-pt="Plataforma LIBRE-SE" data-en="LIBRE-SE Platform">Plataforma LIBRE-SE</h3>
+                    <p data-pt="Um projeto desenvolvido puramente em front-end com o objetivo de ser um tradutor de Português - LIBRAS, com o auxílio da integração VLibras." data-en="A pure front-end project aimed at translating Portuguese to LIBRAS (Brazilian Sign Language), utilizing the official VLibras widget integration.">Um projeto desenvolvido puramente em front-end com o objetivo de ser um tradutor de Português - LIBRAS, com o auxílio da integração VLibras.</p>
+                </div>
+                <a href="https://github.com/anaritamoura/ProjetoLibreSe" target="_blank" class="btn-project" style="text-align: center; text-decoration: none;" data-pt="Visualizar" data-en="View Project">Visualizar</a>
+            </div>            
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2 data-pt="Entre em contato comigo!" data-en="Feel free to get in touch!">Entre em Contato</h2>
+        <form id="contact-form" action="https://formspree.io/f/xpqedrjg" method="POST">
+            <input type="text" id="name" name="name" placeholder="Seu Nome" data-pt="Seu Nome" data-en="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" data-pt="Seu E-mail" data-en="Your best e-mail" required>
+            <textarea id="message" name="message" placeholder="Sua Mensagem" rows="5" data-pt="Sua Mensagem" data-en="Your Message" required></textarea>
+            <button type="submit" class="btn-rounded" data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</button>
+        </form>
+        <div id="form-feedback"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
